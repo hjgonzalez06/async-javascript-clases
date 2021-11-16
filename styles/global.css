@@ -1,0 +1,15 @@
+@import './reset.css';
+@import './basic-grid-view.css';
+@import './D-DIN.css';
+
+/* Estilos globales */
+
+html, body {
+  height: 100%;
+  background-color: #FFFFFF;
+  font-family: 'D-DIN', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+}
