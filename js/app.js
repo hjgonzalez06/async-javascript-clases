@@ -39,7 +39,7 @@ window.onload = () => {
       getSpacexLaunchesData()
         .then(data => {
           const launches = []
-          data.map(({ flight_number, mission_name, launch_year, rocket, launch_site }) => {
+          data?.map(({ flight_number, mission_name, launch_year, rocket, launch_site }) => {
             const { rocket_name } = rocket
             const { site_name } = launch_site
             let launch = `<tr>
@@ -48,7 +48,7 @@ window.onload = () => {
               <td>${launch_year}</td>
               <td>${rocket_name}</td>
               <td>${site_name}</td>
-              <td class='info'><button>Ver más</button></td>
+              <td><button class='info'>Ver más</button></td>
             <tr>`
             launches.push(launch)
           })
@@ -59,7 +59,7 @@ window.onload = () => {
         })
     })
     .catch(() => {
-      alert('No existe el documento solicitado')
+      alert('No existe la página solicitada')
     })
 
     launches_btn.addEventListener('click', () => {
@@ -70,7 +70,7 @@ window.onload = () => {
           getSpacexLaunchesData()
             .then(data => {
               const launches = []
-              data.map(({ flight_number, mission_name, launch_year, rocket, launch_site }) => {
+              data?.map(({ flight_number, mission_name, launch_year, rocket, launch_site }) => {
                 const { rocket_name } = rocket
                 const { site_name } = launch_site
                 let launch = `<tr>
@@ -90,7 +90,7 @@ window.onload = () => {
             })
         })
         .catch(() => {
-          alert('No existe el documento solicitado')
+          alert('No existe la página solicitada')
         })
     })
 
@@ -118,7 +118,7 @@ window.onload = () => {
             })
         })
         .catch(() => {
-          alert('No existe el documento solicitado')
+          alert('No existe la página solicitada')
         })
     })
 
